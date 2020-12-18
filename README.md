@@ -1,16 +1,13 @@
 # CycleGAN_for_FER
 Check out our website for more information on our project!
 
-## Code
-This code is designed to be run on Google Colab. You can either download the files here or copy our Colab files below:
-
 ## Google Drive setup
 
 ## Usage
-Below we explain how to run our Colab notebooks to train our CycleGANs to generate images and use the generated images to augment the FER2013 dataset during CNN training.
+Below we explain how to set up our Python notebooks to train our CycleGANs to generate images and use the generated images to augment the FER2013 dataset during CNN training. Note that the instructions and code provided are intended to be run on [Google Colab](colab.research.google.com/).
 
 ### PyTorch CycleGAN
-To run this notebook, please make sure to first download the [FER2013 Kaggle dataset](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge). It would be easiest to put the `fer2013.csv` file into your Google Drive in the same location as where you want to save your model checkpoints and images. For reference, the folder structure we used was the following:
+Please make sure to first download the [FER2013 Kaggle dataset](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge). It would be easiest to put the `fer2013.csv` file into your Google Drive in the same location as where you want to save your model checkpoints and images. For reference, the folder structure we used was the following:
 
 ```
 MyDrive/
@@ -42,13 +39,15 @@ This colab file should work regardless of folder structure, as long as you make 
 * `DISC_A_PATH`: folder to save reference discriminator model checkpoints
 * `DISC_B_PATH`: folder to save reference target model checkpoints
 
+## How to run the notebooks
+Now that everything has been set up, follow the instructions below to train, test, and generate images using our models.
+
+### PyTorch CycleGAN
 To train the model, you can simply select the "Training the model" header and run all cells above it (you can use Runtime > Run before). This will set up everything for training. Then, follow the instructions in the "Training the model" section of the notebook to set your training parameters/constants and then you can train the CycleGAN.
 
 Since loss is a usually a poor indicator of model correctness, the we can only test the model by simply displaying generated images from the test set ("PublicTest"). Since the test set can be quite large, we have also added saving functionality to our test function so that you can view the generated images along with the input in your Drive. Follow the instructions under the  "Testing the model" section in the notebook to generate and display test images.
 
 If you would like to use your model to generate images for our CNN model, follow the instructions under the "Generating images" section in the notebook.
-
-## How to run the notebooks
 
 ## References
 The majority of our code was implemented by us, but we referenced several Github repositories in the process:
