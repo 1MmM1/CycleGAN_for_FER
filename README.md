@@ -86,6 +86,7 @@ This colab file should work regardless of folder structure, as long as you make 
 
 * `BASE_PATH`: the base folder for your files in your Google Drive
 * `LOG_PATH`: folder to save all training logs
+* `augmented_data_path`: folder to load synthesized data for data augmentation
 
 Follow the instructions in the colab notebook to run and train the CNN model.
 
