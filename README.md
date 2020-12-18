@@ -77,8 +77,8 @@ MyDrive/
 |   |   |   ├── logs/
 |   |   |   |   ├── 0.1/
 |   |   |   |   ├── 0.2/
-|   |   |   |   └── 0.3/                          # files for experiment 0.3
-|   |   |   |   |   ├── log.pkl                   # log file
+|   |   |   |   └── 0.3/                      # files for experiment 0.3
+|   |   |   |   |   ├── log.pkl               # log file
 
 ```
 
