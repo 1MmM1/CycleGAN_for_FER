@@ -39,6 +39,57 @@ This colab file should work regardless of folder structure, as long as you make 
 * `DISC_A_PATH`: folder to save reference discriminator model checkpoints
 * `DISC_B_PATH`: folder to save reference target model checkpoints
 
+### Keras CycleGAN
+To run this notebook, please make sure to first download the [FER2013 Kaggle dataset](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge). It would be easiest to put the `fer2013.csv` file into your Google Drive in the same location as where you want to save your model checkpoints and images. For reference, the folder structure we used was the following:
+
+```
+MyDrive/
+└── colab_files/
+|   └── final_project/
+|   |   ├── fer2013.csv                       # FER2013 dataset
+|   |   └── logs/
+|   |   |   ├── epoch_0/
+|   |   |   ├── epoch_10/
+|   |   |   └── epoch_20/                     # files for epoch 20
+|   |   |   |   ├── <E>_new.npy               # generated images from emotion <E> to add to CNN
+|   |   |   |   ├── <N>_Original_A            # test image <N> class A
+|   |   |   |   ├── <N>_Reconstructed_A       # reconstructed image <N> from class B
+|   |   |   |   ├── <N>_Translated_A          # image generated during training
+|   |   |   |   ├── d_loss_<N>.h5             # discriminator loss
+|   |   |   |   ├── g_loss_<N>.h5             # generator loss
+```
+This colab file should work regardless of folder structure, as long as you make sure the following file path variables point to the correct place:
+
+* `BASE_PATH`: the base folder for your files in your Google Drive
+* `LOGS_PATH`: folder to save your test images, losses and model weights from a specific epoch
+
+Follow the instructions in the colab notebook to run and train the CycleGAN model.
+
+### CNN
+To run this notebook, please make sure to first download the [FER2013 Kaggle dataset](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge). It would be easiest to put the `fer2013.csv` file into your Google Drive in the same location as where you want to save your model checkpoints and images. For reference, the folder structure we used was the following:
+
+```
+MyDrive/
+└── colab_files/
+|   └── final_project/
+|   |   ├── fer2013.csv                       # FER2013 dataset
+|   |   └── data/
+|   |   |   ├── logs/
+|   |   |   |   ├── 0.1/
+|   |   |   |   ├── 0.2/
+|   |   |   |   └── 0.3/                          # files for experiment 0.3
+|   |   |   |   |   ├── log.pkl                   # log file
+
+```
+
+This colab file should work regardless of folder structure, as long as you make sure the following file path variables point to the correct place:
+
+* `BASE_PATH`: the base folder for your files in your Google Drive
+* `LOG_PATH`: folder to save all training logs
+
+Follow the instructions in the colab notebook to run and train the CNN model.
+
+
 ## How to run the notebooks
 Now that everything has been set up, follow the instructions below to train, test, and generate images using our models.
 
@@ -56,3 +107,4 @@ The majority of our code was implemented by us, but we referenced several Github
 * https://github.com/FrancescoSaverioZuppichini/ResNet
 * https://github.com/ivadym/FER/
 * https://github.com/yunjey/mnist-svhn-transfer/
+* https://github.com/ivadym/FER
