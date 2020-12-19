@@ -1,7 +1,5 @@
 # CycleGAN_for_FER
-Check out our website for more information on our project!
-
-## Google Drive setup
+Check out our [website](https://sites.google.com/cs.washington.edu/cyclegan-for-fer/home) for more information on our project!
 
 ## Usage
 Below we explain how to set up our Python notebooks to train our CycleGANs to generate images and use the generated images to augment the FER2013 dataset during CNN training. Note that the instructions and code provided are intended to be run on [Google Colab](colab.research.google.com/).
