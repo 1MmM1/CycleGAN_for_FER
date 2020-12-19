@@ -114,4 +114,3 @@ The majority of our code was implemented by us, but we referenced several Github
 * https://github.com/FrancescoSaverioZuppichini/ResNet
 * https://github.com/ivadym/FER/
 * https://github.com/yunjey/mnist-svhn-transfer/
-* https://github.com/ivadym/FER
