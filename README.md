@@ -93,14 +93,14 @@ Follow the instructions in the colab notebook to run and train the CNN model.
 Now that everything has been set up, follow the instructions below to train, test, and generate images using our models.
 
 ### PyTorch CycleGAN
-To train the model, you can simply select the "Training the model" header and run all cells above it (you can use Runtime > Run before). This will set up everything for training. Then, follow the instructions in the "Training the model" section of the notebook to set your training parameters/constants and then you can train the CycleGAN.
+First, make sure everything is set up correctly by selecting the "Training the model" header and running all cells above it (you can use Runtime > Run before). This will make sure all packages/libraries are imported, the GPU and your Google Drive have been connected, and the functions are loaded. Then, follow the instructions in the "Training the model" section of the notebook to set your training parameters/constants and then you can train the CycleGAN.
 
-Since loss is a usually a poor indicator of model correctness, the we can only test the model by simply displaying generated images from the test set ("PublicTest"). Since the test set can be quite large, we have also added saving functionality to our test function so that you can view the generated images along with the input in your Drive. Follow the instructions under the  "Testing the model" section in the notebook to generate and display test images.
+Since loss is a usually a poor indicator of model correctness, we can only test the model by simply displaying generated images from the test set ("PublicTest"). The test set can be quite large, so we have also added saving functionality to our test function so that you can view the generated images along with the input in your Drive. Follow the instructions under the  "Testing the model" section in the notebook to generate and display test images.
 
 If you would like to use your model to generate images for our CNN model, follow the instructions under the "Generating images" section in the notebook.
 
-### PyTorch CycleGAN
-To train the model, do as instructed above.
+### Keras CycleGAN
+To train the model, follow the instructions in the colab notebook.
 
 ### CNN
 To train CNN before data augmentation, select "Preprocess Input And Data Augmentation" header and set "augment" to False. Run all the cells up to Evaluation. In the Evaluation section you can train the model for as many epochs as you prefer. Currently, it's set to be trained for 500 epochs. Also, you can choose which of the three implemented models you want to train by uncommenting the appropriate line.
